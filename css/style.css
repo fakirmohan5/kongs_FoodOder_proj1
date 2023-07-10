@@ -40,12 +40,16 @@ section:nth-child(even) {
     border-radius: .5rem;
     cursor: pointer;
     padding: .8rem 3rem;
+    
 }
 
 .btn:hover {
     background: var(--green);
-    letter-spacing: .1rem;
+    transform: scale(1.05);
 }
+
+
+/* CSS for Header section */
 
 header {
     position: fixed;
@@ -59,14 +63,36 @@ header {
     box-shadow: var(--box-shadow);
 }
 
+header .logo1 {
+    justify-content: space-between;
+    display: flex;
+}
+
+header img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+header img:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+
+}
+
 header .logo {
     color: var(--green);
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    border-radius: 40%;
+    padding: 5px 5px;
 }
 
 header .logo:hover {
     color: #fff;
-    background: var(--green);
+    background-color: rgb(118, 234, 118) ;
+    /* background: var(--green); */
 }
 
 header .navbar * {
@@ -106,6 +132,10 @@ header .icon a:hover {
 header .icon #menu-bars {
     display: none;
 }
+
+
+
+/* CSS for Search Form */
 #search-form {
     position: fixed;
     top: -110%; left: 0;
@@ -158,24 +188,34 @@ header .icon #menu-bars {
     font-size: 5rem;
 }
 
+/* CSS for Slider section */
 .home .home-slider .slide {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     padding-top: 9rem;
 }
 
 .home .home-slider .slide .content {
-    flex: 1 1 45rem;
+    flex: 1 1 50rem;
+}
+
+.home .home-slider .slide .content a {
+    margin-left: 10px;
 }
 
 .home .home-slider .slide .image {
+    padding-left: 200px;
     flex: 1 1 45rem;
+    align-items: center;
 }
 
 .home .home-slider .slide .image img {
-    width: 100%;
+    /* width: 100%; */
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
 }
 
 .home .home-slider .slide .content span {
@@ -214,8 +254,40 @@ header .icon #menu-bars {
     padding: .5rem;
 }
 
+/* CSS for About Section */
+#about {
+    background-color: #fff;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+}
+.about .box-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    height: 220px;
+
+}
 
 
+.about .box-container p {
+    padding-left: 10px;
+    padding-right: 15px;
+}
+.about .box-container aside img {
+    height: 200px;
+    width: 250px;
+    /* padding-left: 10px; */
+    border-radius: 20px;
+}
+.about .box-container aside img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+/* CSS for Menu section */
 .menu .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -244,6 +316,10 @@ header .icon #menu-bars {
     width: 100%;
     border-radius: .5rem;
     object-fit: cover;
+}
+
+.menu .box-container .box .image img:hover{
+    transform: scale(1.1);
 }
 
 .menu .box-container .box .image .fa-heart {
@@ -292,9 +368,12 @@ header .icon #menu-bars {
 .menu .box-container .box .content .price {
     color: var(--green);
     margin-left: 1rem;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
+
+/* CSS for Order Section */
 
 .order form {
     max-width: 90rem;
@@ -397,7 +476,12 @@ header .icon #menu-bars {
 
 
 
+
+
+
+
 /* media queries */
+/* for responsive nav-bar design */
 
 
 @media (max-width:768px) {

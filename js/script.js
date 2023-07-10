@@ -1,3 +1,5 @@
+
+// Script for toggle section in responsive nav bar design
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 
@@ -12,7 +14,7 @@ let nsvlinks = document.querySelectorAll('header .navbar a');
 
 
 
-
+// script for showing active section in nav bar
 window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
@@ -24,7 +26,7 @@ window.onscroll = () => {
       let id = sec.getAttribute('id');
 
       if(top => offset && top < offset + height) {
-        navLinks.forEach(links => {
+        navinks.forEach(links => {
           links.classList.remove('active');
           document.querySelector('header .navbar a[href*='+id+']').classList.add('active');
         })
@@ -34,6 +36,7 @@ window.onscroll = () => {
     });
 }
 
+// script for search icon section
 document.querySelector('#search-icon').onclick = () => {
     document.querySelector('#search-form').classList.toggle('active');
 }
@@ -42,7 +45,7 @@ document.querySelector('#close').onclick = () => {
     document.querySelector('#search-form').classList.remove('active');
 }
 
-
+// Script for Slider section
 var swiper = new Swiper(".home-slider", {
   spaceBetween: 30,
   centeredSlides: true,
